@@ -1,0 +1,11 @@
+def maxProfit(self, prices):
+    if not prices:
+        return 0
+    sum=0
+    for n in range(len(prices)-1):
+        if prices[n]<prices[n+1]:
+            sum+=prices[n+1]-prices[n]
+    return sum
+    
+prices = [7,1,5,3,6,4]
+maxProfit(_,prices)

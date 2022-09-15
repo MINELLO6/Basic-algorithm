@@ -1,0 +1,13 @@
+def removeDuplicates(self,nums):
+    if not nums:
+        return 0
+    i=j=1
+    while j<len(nums):
+        if nums[j-1]!=nums[j]:
+            nums[i]=nums[j]
+            i+=1
+        j+=1
+    return i,nums[:i]
+    
+nums=[0,0,1,1,1,2,2,3,3,4]
+removeDuplicates(_,[0,0,1,1,1,2,2,3,3,4])
